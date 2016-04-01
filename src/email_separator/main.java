@@ -1,3 +1,8 @@
+/*
+ * Purpose: Some Webapps require the user to enter a list of emails that are separated with commas.
+ * This program takes in a list of emails in a text file and creates a new one where the emails are 
+ * separated by commas.
+ */
 package email_separator;
 
 import java.awt.HeadlessException;//importing the necessary tools to catch the HeadlessException
@@ -48,15 +53,15 @@ public class main {
 							
 							Scanner emails_in = new Scanner(selected_file); //creating instance of file we imported with scanner so that we can read it
 							
-							PrintWriter emails_out = new PrintWriter("emails_out.txt");
+							PrintWriter emails_out = new PrintWriter("emails_out.txt");//creating instance for printwriter
 							
 							while(emails_in.hasNext()){
 								emails_out.println(emails_in.next() + ",");
 							}
 							
-							System.out.println("Output is in file of 'emails_out.txt in programs directory.");
-						emails_in.close();
-						emails_out.close();
+							System.out.println("Output is in file of 'emails_out.txt' in programs directory.");
+						emails_in.close(); //closing instance
+						emails_out.close(); //closing instance
 						}
 						catch(FileNotFoundException exception){//below print statements if Scanner throws error
 							System.out.println("File can not be found.  Was it renamed, deleted, or permissions changed?");
