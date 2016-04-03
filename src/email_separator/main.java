@@ -3,7 +3,6 @@
  * This program takes in a list of emails in a text file and creates a new one where the emails are 
  * separated by commas.
  */
-package email_separator;
 
 import java.awt.HeadlessException;//importing the necessary tools to catch the HeadlessException
 import java.io.File;//importing for ability to take in file to be read by scanner
